@@ -33,11 +33,11 @@ const Sidebar = () => {
   return (
     <div className="fixed md:right-4 bottom-0 w-full md:top-[40%] z-[20] py-2 md:h-[200px] md:w-[48px] md:rounded-full bg-gradient-to-b from-gray-400 bg-opacity-50 ">
       <AnimatePresence mode="wait">
-        {isRouting && <Transition />}
+        {isRouting && <Transition key="page-transition" />}
         <div className="flex md:flex-col gap-5 justify-center items-center h-full w-full">
-          {NavLinks.map((link) => (
+          {NavLinks.map((link, index) => (
             <Link
-              key={link.name}
+              key={`${link.name}-${index}`}
               href={link.link}
               onClick={() => setIsActive(link.name)}
             >

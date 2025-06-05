@@ -34,12 +34,12 @@ export const NavLinks = [
   {
     name: 'About me',
     icon: RxPerson,
-    link: '/about-me',
+    link: '/about',
   },
   {
     name: 'Projects',
     icon: RxDashboard,
-    link: '/my-projects',
+    link: '/projects',
   },
 ];
 
